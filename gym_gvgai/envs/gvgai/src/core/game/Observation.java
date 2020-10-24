@@ -1,5 +1,5 @@
 package core.game;
-
+import core.vgdl.VGDLRegistry;
 import tools.Vector2d;
 
 /**
@@ -17,6 +17,11 @@ public class Observation implements Comparable<Observation>
      * Type of sprite of this observation.
      */
     public int itype;
+
+        /**
+     * String definition of itype
+     */
+    public String itypeKey;
 
     /**
      * unique ID for this observation
@@ -44,6 +49,7 @@ public class Observation implements Comparable<Observation>
         category = -1;
         itype = -1;
         obsID = -1;
+        itypeKey = null;
         position = new Vector2d();
         reference = null;
         sqDist = -1;
@@ -60,6 +66,7 @@ public class Observation implements Comparable<Observation>
     public Observation(int itype, int id, Vector2d pos, Vector2d posReference, int category)
     {
         this.itype = itype;
+        this.itypeKey = VGDLRegistry.GetInstance().getRegisteredSpriteKey(itype);
         this.obsID = id;
         this.position = pos;
         this.reference = posReference;
@@ -78,6 +85,7 @@ public class Observation implements Comparable<Observation>
     public void update(int itype, int id, Vector2d pos, Vector2d posReference, int category)
     {
         this.itype = itype;
+        this.itypeKey = VGDLRegistry.GetInstance().getRegisteredSpriteKey(itype);
         this.obsID = id;
         this.position = pos;
         this.reference = posReference;
@@ -122,6 +130,7 @@ public class Observation implements Comparable<Observation>
         return "Observation{" +
                 "category=" + category +
                 ", itype=" + itype +
+                ", itypeKey=" + itypeKey +
                 ", obsID=" + obsID +
                 ", position=" + position +
                 ", reference=" + reference +
