@@ -93,6 +93,8 @@ class ClientCommGYM:
             self.lastScore=self.sso.gameScore
         else:
             score=0
+        if self.sso.gameTick==0:
+            score=0
         
         if self.sso.isGameOver==True or self.sso.gameWinner=='PLAYER_WINS' or self.sso.phase == "FINISH" or self.sso.phase=="ABORT" or self.sso.phase=="End":
             self.sso.image = np.array(imageio.imread(os.path.join(self.tempDir.name, 'gameStateByBytes.png')))
