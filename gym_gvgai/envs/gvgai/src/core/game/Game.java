@@ -746,7 +746,7 @@ public abstract class Game {
 		}
 
 		historicEvents.clear();
-
+        if(!timeEffects.isEmpty()) timeEffects.first().nextExecution=0;
 		resetShieldEffects();
 	}
 
