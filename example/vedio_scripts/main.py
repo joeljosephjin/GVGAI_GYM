@@ -12,7 +12,7 @@ if __name__ == '__main__':
     # gameName = input('game Name:')
     gameName = 'bravekeeper'
     # lvlName = input('level name:')
-    lvlName = 'lvl2'
+    lvlName = 'lvl1'
     game = Game(gameName, lvlName)
     game.humanPlay()
     # game.start(Agent())
