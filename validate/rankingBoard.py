@@ -9,11 +9,11 @@ import time
 import randomAgent as Agent
 
 
-games = ['gvgai-bravekeeper', 'gvgai-greedymouse', 'gvgai-trappedhero']
-# games = ['gvgai-treasurekeeper', 'gvgai-waterpuzzle', 'gvgai-golddigger']
+# games = ['gvgai-bravekeeper', 'gvgai-greedymouse', 'gvgai-trappedhero']
+games = ['gvgai-bravekeeper']
 
-# validateLevels = ['lvl1-v0', 'lvl2-v0', 'lvl3-v0']
-validateLevels = ['lvl0-v0', 'lvl1-v0']
+# validateLevels = ['lvl0-v0', 'lvl1-v0']
+validateLevels = ['lvl2-v0']
 
 totalTimes = 20 # 20
 numSteps = 2000 # 2000
@@ -36,10 +36,12 @@ for game in games:
 
             for tick in range(numSteps): # 2000
                 action_id = agent.act(stateObs, actions)
+                # env.render()
                 stateObs, diffScore, done, debug = env.step(action_id)
                 totalScore += diffScore
                 # print("Action " + str(action_id) + " tick " + str(tick+1) + " reward " + str(diffScore) + " win " + debug["winner"])
                 if done:
+                    env.close()
                     break
 
             print('Runtime:', round(time.time() - startTime,1), 'seconds', '\n')

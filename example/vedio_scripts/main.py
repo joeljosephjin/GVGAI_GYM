@@ -1,4 +1,4 @@
-from agent import Agent
+# from agent import Agent
 from game import Game
 
 '''
@@ -9,8 +9,10 @@ from game import Game
 
 if __name__ == '__main__':
     print('Games:\ngolddigger, treasurekeeper, waterpuzzle\nlevels:lvl0, lvl1')
-    gameName = input('game Name:')
-    lvlName = input('level name:')
+    # gameName = input('game Name:')
+    gameName = 'bravekeeper'
+    # lvlName = input('level name:')
+    lvlName = 'lvl2'
     game = Game(gameName, lvlName)
     game.humanPlay()
     # game.start(Agent())

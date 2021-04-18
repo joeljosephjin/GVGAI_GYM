@@ -44,10 +44,11 @@ class Game:
         screen = pg.display.set_mode(self.size)
         while not self.done:
             evt = pg.event.wait()
+
             if evt.type == pg.QUIT:
                 pg.quit()
                 self.done = True
-            elif evt.type == 3:
+            elif evt.type == pg.KEYDOWN:
                 self.playerAct(self.parseKey(evt))
             if self.done:
                 print('---------------------------\nFinish. Final score = %d' % self.score)

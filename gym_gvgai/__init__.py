@@ -15,6 +15,7 @@ for game in games:
 			# space_invaders should yield SpaceInvaders-v0 and SpaceInvaders-ram-v0
 			name = game.split('_')[0]
 			version = int(game.split('_')[-1][1:])
+			# if name=="bravekeeper":	print(name, lvl, version)
 			register(
 	    		id='gvgai-{}-lvl{}-v{}'.format(name, lvl, version),
 	    		entry_point='gym_gvgai.envs.gvgai_env:GVGAI_Env',
