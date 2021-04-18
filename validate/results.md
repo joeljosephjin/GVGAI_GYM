@@ -69,3 +69,13 @@ trappedhero-1                       0.0                  0
 
 No of runs: 20 , Episode Length: 1200
 [Finished in 3333.9s]
+
+
+### Smaller Run
+
+----------------VISUALIZE--------------------
+Game-Level                          Average Reward       No. of wins 
+
+bravekeeper-2                       5.8                  0         
+
+No of runs: 20 , Episode Length: 145
