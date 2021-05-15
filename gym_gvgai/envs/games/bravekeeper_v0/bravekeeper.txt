@@ -35,7 +35,7 @@ BasicGame
         box    wall box > undoAll notStype=monsterQuick,monsterNormal,monsterSlow
         wall   box       > undoAll notStype=monsterQuick,monsterNormal,monsterSlow,avatar
         avatar thief     > killSprite
-        avatar TIME      > undoAll  notStype=monsterQuick,monsterNormal,monsterSlow   timer=100 repeating=true scoreChange=5
+        avatar TIME      > undoAll  notStype=monsterQuick,monsterNormal,monsterSlow   timer=100 repeating=true scoreChange=0
 
     TerminationSet
         Timeout limit=1200                  win=True
